@@ -26,7 +26,7 @@ for (let count = 0; count < text.length; count++) {
   if (isNaN(Number(item))) {
     if (count - 1 !== -1) {
       // Checks if the previous character is not a number.
-      if (!isNaN(Number(text[count - 1]))) {
+      if (isNaN(Number(text[count - 1]))) {
         // Pushes the original character into the array.
         newString = item
         newText.push(newString)
